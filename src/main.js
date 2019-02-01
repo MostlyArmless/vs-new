@@ -1,5 +1,10 @@
-var extract = require('extract-zip');
+var ncp = require('ncp').ncp;
 
-extract(source, function(err) {
-    console.error(err);
+ncp.limit = 16;
+
+ncp(source, destination, function(err) {
+    if (err) {
+        return console.error(err);
+    }
+    console.log('Done.');
 });
