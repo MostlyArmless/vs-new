@@ -6,8 +6,12 @@
   "scripts": {
     "test": "mocha --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "keywords": [],
-  "author": "Mike Thiem <mike.j.thiem@gmail.com>",
+  "author": "YOUR NAME HERE",
   "license": "MIT",
   "dependencies": {
     "@types/chai": "^4.1.7",
