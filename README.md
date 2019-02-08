@@ -14,3 +14,7 @@ This package lets you deploy a preconfigured directory structure including:
 
 ## Usage
 From your parent Projects directory: <code>vsnew my-new-project</code> will create a new directory named my-new-project and will insert that name into the package.json file. All other boilerplate files will be copied into that directory.
+
+## Revisions
+### 1.0.2
+Added <code>ts-node</code> and <code>typescript</code> packages to the dev-dependencies so that the "Launch current file with ts-node" launch config will work out-of-the-box.
