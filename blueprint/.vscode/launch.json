@@ -36,7 +36,7 @@
                 "--nolazy"
             ],
             "sourceMaps": true,
-            "internalConsoleOptions": "openOnFirstSessionStart"
+            "console": "integratedTerminal"
         },
         {
             "type": "node",
