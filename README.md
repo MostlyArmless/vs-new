@@ -18,3 +18,7 @@ From your parent Projects directory: <code>vsnew my-new-project</code> will crea
 ## Revisions
 ### 1.0.2
 Added <code>ts-node</code> and <code>typescript</code> packages to the dev-dependencies so that the "Launch current file with ts-node" launch config will work out-of-the-box.
+
+## TODO
+Potential upcoming features:
+* Add an argument to determine whether to deploy a vanilla javascript setup, or a typescript one (default)
