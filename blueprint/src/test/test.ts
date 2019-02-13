@@ -1,6 +1,6 @@
 // Test framework dependencies
 // const should = require('chai').should();
-// const expect = require('chai').expect;
+const expect = require('chai').expect;
 // const assert = require('chai').assert;
 import * as chai from 'chai';
 chai.use(require('chai-as-promised')); // Extension that defines the "eventually" keyword
@@ -16,7 +16,7 @@ describe('Test suite', () => {
 
     it('should have the correct value', () => {
         // Test
-        m_testSuiteVariable.should.equal(1);
+        expect(m_testSuiteVariable).to.equal(1);
     });
 
     after(() => {

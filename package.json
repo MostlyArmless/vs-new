@@ -20,7 +20,7 @@
     "@types/chai": "^4.1.7",
     "@types/jsonfile": "^5.0.0",
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.21",
+    "@types/node": "^10.12.26",
     "jsonfile": "^5.0.0",
     "ncp": "^2.0.0"
   },

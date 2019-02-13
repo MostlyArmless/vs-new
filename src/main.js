@@ -4,6 +4,7 @@ var jsonfile = require('jsonfile');
 var os = require('os');
 var fs = require('fs');
 var path = require('path');
+var { exec } = require('child_process');
 
 let packageName = process.argv[2];
 try {
@@ -26,12 +27,30 @@ ncp(path.join(__dirname,'../blueprint/'), packageDir, function(err) {
     console.log(packageFilePath);
     let packageJsonContents = jsonfile.readFileSync(packageFilePath);
 
-    
-    console.log(`Package name = "${packageName}", author = "${os.userInfo().username}"`);
+    let username = 'Dummy User';
+    try {
+        username = os.userInfo().username
+    } catch (error) {
+        console.error('Error getting Windows username, using default username');        
+    }
+    console.log(`Package name = "${packageName}", author = "${username}"`);
     packageJsonContents.name = packageName;
-    packageJsonContents.author = os.userInfo().username;
+    packageJsonContents.author = username;
 
     jsonfile.writeFileSync(packageFilePath, packageJsonContents, { spaces: 2 });
 
-    console.log('Done.');
+    exec(`git init ./${packageName}`, (err, stdout, stderr) => {
+        if (err) {
+            // node couldn't execute the command
+            console.error('git init command failed due to node.');
+            return;
+        }
+
+        // the *entire* stdout and stderr (buffered)
+        console.log(stdout);
+        if (stderr) {
+            console.error(`stderr: ${stderr}`);
+        }
+        console.log('Done.');
+    });    
 });
