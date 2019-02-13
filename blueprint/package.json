@@ -2,8 +2,9 @@
   "name": "NEW-PROJECT",
   "version": "1.0.0",
   "description": "",
-  "main": "./build/main.ts",
+  "main": "./build/main.js",
   "scripts": {
+    "start": "./build/main.js",
     "test": "mocha --watch"
   },
   "repository": {
