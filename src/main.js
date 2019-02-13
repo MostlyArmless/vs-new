@@ -25,7 +25,6 @@ ncp(path.join(__dirname,'../blueprint/'), packageDir, function(err) {
     // Replace the package name and author name
     let packageFilePath = path.join(packageDir, '/package.json');
     console.log(packageFilePath);
-    let packageJsonContents = jsonfile.readFileSync(packageFilePath);
 
     let username = 'Dummy User';
     try {
@@ -33,24 +32,30 @@ ncp(path.join(__dirname,'../blueprint/'), packageDir, function(err) {
     } catch (error) {
         console.error('Error getting Windows username, using default username');        
     }
-    console.log(`Package name = "${packageName}", author = "${username}"`);
+    
+    let packageJsonContents = jsonfile.readFileSync(packageFilePath);
     packageJsonContents.name = packageName;
     packageJsonContents.author = username;
-
     jsonfile.writeFileSync(packageFilePath, packageJsonContents, { spaces: 2 });
 
+    console.log(`Package name = "${packageName}", author = "${username}"`);
+
+    // Set up a blank git repo
     exec(`git init ./${packageName}`, (err, stdout, stderr) => {
         if (err) {
             // node couldn't execute the command
             console.error('git init command failed due to node.');
             return;
         }
-
-        // the *entire* stdout and stderr (buffered)
         console.log(stdout);
         if (stderr) {
             console.error(`stderr: ${stderr}`);
         }
-        console.log('Done.');
-    });    
+    });
+    
+    // Insert the package name into the README file
+    const deployedReadmeFile = `./${packageName}/README.md`;
+    let readmeContents = fs.readFileSync(deployedReadmeFile, 'utf8');
+    let newReadmeContents = readmeContents.replace(/my-new-project/gi, packageName);
+    fs.writeFileSync(deployedReadmeFile, newReadmeContents);
 });
