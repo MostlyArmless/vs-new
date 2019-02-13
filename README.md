@@ -22,8 +22,8 @@ From your parent Projects directory: <code>vs-new my-new-project</code> will cre
 
 ## Revisions
 ### 1.1.1
-* Improve README
-* Blueprint README file now also auto-replaces the package name.
+* Improved README
+* Blueprint README file now also auto-populates the package name.
 
 ### 1.1.0
 * Added content to blueprint README file
