@@ -21,7 +21,7 @@ This package lets you deploy a preconfigured directory structure including:
 From your parent Projects directory: <code>vs-new my-new-project</code> will create a new directory named my-new-project, will insert that name into the package.json file, and will use your Windows username to populate the Author field. All other boilerplate files will be copied into the directory.
 
 ## Revisions
-### 1.1.3
+### 1.1.4
 * Improved README
 * Blueprint README file now also auto-populates the package name.
 

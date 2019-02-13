@@ -19,15 +19,14 @@
     "new project",
     "development environment setup",
     "vs code",
-    "visual studio code"
+    "visual studio code",
+    "dev env",
+    "setup",
+    "beginner"
   ],
   "author": "Mike Thiem <mike.j.thiem@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/chai": "^4.1.7",
-    "@types/jsonfile": "^5.0.0",
-    "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.26",
     "jsonfile": "^5.0.0",
     "ncp": "^2.0.0"
   },
