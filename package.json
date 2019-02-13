@@ -1,7 +1,7 @@
 {
   "name": "vs-new",
   "version": "1.1.2",
-  "description": "",
+  "description": "Set up a development directory with everything you need to get started with TypeScript development and debugging using VS Code",
   "main": "./main.js",
   "bin": {
     "vs-new": "./src/main.js"
@@ -17,7 +17,9 @@
     "typescript",
     "boilerplate",
     "new project",
-    "development environment setup"
+    "development environment setup",
+    "vs code",
+    "visual studio code"
   ],
   "author": "Mike Thiem <mike.j.thiem@gmail.com>",
   "license": "MIT",
