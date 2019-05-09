@@ -35,6 +35,11 @@ will create a new directory named my-new-project, will insert that name into the
 
 ## Revisions
 
+### 1.2.1
+
+* Added shebang to main.js and `bin` field to package.json, which are required for `npm i -g ./` to work
+* .gitignore file is now being generated correctly.
+
 ### 1.1.4
 
 * Improved README
