@@ -36,6 +36,10 @@ ncp(path.join(__dirname,'../blueprint/'), packageDir, function(err) {
     let packageJsonContents = jsonfile.readFileSync(packageFilePath);
     packageJsonContents.name = packageName;
     packageJsonContents.author = username;
+    binField = {};
+    binField[packageName] = "./build/main.js";
+    packageJsonContents.bin = binField;
+
     jsonfile.writeFileSync(packageFilePath, packageJsonContents, { spaces: 2 });
 
     console.log(`Package name = "${packageName}", author = "${username}"`);
@@ -52,6 +56,13 @@ ncp(path.join(__dirname,'../blueprint/'), packageDir, function(err) {
             console.error(`stderr: ${stderr}`);
         }
     });
+    // Create a .gitignore file with default contents
+    gitIgnoreContents = 
+    `# Ignore node_modules anywhere in the directory tree
+**/node_modules/
+# Ignore the outputs of tsc
+/build/`;
+    fs.writeFileSync(`./${packageName}/.gitignore`, gitIgnoreContents);
     
     // Insert the package name into the README file
     const deployedReadmeFile = `./${packageName}/README.md`;

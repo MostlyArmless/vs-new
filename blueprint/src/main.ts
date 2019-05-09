@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Hello World app adapted from https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 
 class Student {

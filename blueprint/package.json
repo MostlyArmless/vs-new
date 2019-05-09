@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "./build/main.js",
+  "bin": {
+    "NEW-PROJECT": "./build/main.js"
+  },
   "scripts": {
     "start": "node ./build/main.js",
     "test": "mocha --watch"
