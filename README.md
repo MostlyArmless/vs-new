@@ -35,6 +35,10 @@ will create a new directory named my-new-project, will insert that name into the
 
 ## Revisions
 
+### 1.2.2
+
+* Moved all @types dependencies in the generated package.json file to devDependencies
+
 ### 1.2.1
 
 * Added shebang to main.js and `bin` field to package.json, which are required for `npm i -g ./` to work
