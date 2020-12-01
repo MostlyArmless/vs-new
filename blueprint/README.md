@@ -10,16 +10,11 @@ npm install my-new-project
 
 ## Usage
 
-```javascript
+```typescript
 var excellentPkg = require('my-new-project');
+import * as excellentPkg from 'my-new-project';
 // Everything is now excellent.
 ```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 

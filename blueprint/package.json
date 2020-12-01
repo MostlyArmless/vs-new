@@ -7,8 +7,9 @@
     "NEW-PROJECT": "./build/main.js"
   },
   "scripts": {
-    "start": "node ./build/main.js",
-    "test": "mocha --watch"
+    "start": "node ./build/src/main.js",
+    "test": "mocha ./build/test/*spec.ts",
+    "clean": "node ./scripts/clean.js"
   },
   "repository": {
     "type": "git",
@@ -17,15 +18,13 @@
   "keywords": [],
   "author": "YOUR NAME HERE",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.19",
     "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "chai-string": "^1.5.0",
+    "fs-extra": "^9.0.1",
     "mocha": "^5.2.0",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.3"

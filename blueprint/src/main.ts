@@ -1,23 +1,13 @@
-#!/usr/bin/env node
+import { GLOBAL_CONSTANT } from './constants';
+import { IUser } from './interfaces';
 
-// Hello World app adapted from https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
-
-class Student {
-    fullName: string;
-    constructor(public firstName: string, public middleInitial: string, public lastName: string) {
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
-    }
+function main(): void
+{
+    const user: IUser = {
+        name: "Wayne Gretsky",
+        age: 111
+    };
+    console.log( `Hello World! The number is ${GLOBAL_CONSTANT} and the user is ${user.name} who is ${user.age}` );
 }
 
-interface Person {
-    firstName: string;
-    lastName: string;
-}
-
-function greeter(person: Person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-
-let user = new Student("Jane", "M.", "User");
-
-console.log(greeter(user));
+main();
