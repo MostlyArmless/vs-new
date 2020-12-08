@@ -4,7 +4,7 @@
   "description": "Set up a development directory with everything you need to get started with TypeScript development and debugging using VS Code",
   "main": "./main.js",
   "bin": {
-    "vs-new": "./src/main.js"
+    "vs-new": "./build/main.js"
   },
   "repository": {
     "type": "git",
