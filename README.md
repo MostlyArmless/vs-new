@@ -5,15 +5,16 @@ Set up a blueprint folder ready to go for TypeScript Node.js development in VS C
 This package lets you deploy a pre-configured directory structure including:
 
 * Boilerplate README markdown file
-* blank git repository, with a .gitignore that ignores ./node_modules/ and the ./build/ directory
+* blank git repository, with a .gitignore that ignores `./node_modules/`, `./build/` and the `./coverage` directories
 * .vscode folder with:
-    * pre-configured launch.json file with a Mocha test debug config, and a debug-current-working-file config
+    * pre-configured launch.json file with a `debug-current-working-file` config
     * pre-configured tasks.json that defines a tsc-watch task for background TypeScript compiling
+    * some recommended vscode extensions that you may find useful for generic Typescript development
 * pre-configured tsconfig.json that auto-includes all .ts files under ./src
 * package.json file
-    * includes dependencies for TypeScript development & debugging, testing withg Mocha & Chai, and ts-node & typescript packages for debugging .ts files directly in VS Code
+    * includes dependencies for TypeScript development & debugging, testing with Jest, and ts-node & typescript packages for debugging .ts files directly in VS Code
     * Auto-populates the package name and author name (using your Windows username)
-* ./src/test/test.ts includes boilerplate Mocha test
+* ./src/test/test.ts includes boilerplate Jest test
 
 ## Installation
 
