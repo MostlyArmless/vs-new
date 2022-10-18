@@ -35,6 +35,14 @@ will create a new directory named my-new-project, will insert that name into the
 
 ## Revisions
 
+### 2.0.0
+
+* Replace `mocha` with `jest` as the test runner
+* Run `npm i ...` to install all the dev dependencies in the resulting project, rather than just copying a static package.json file
+  * This allows the user to always start with the latest versions of all these packages
+* Added a helper library and a sample unit test which better demonstrate the unity test functionality
+* Added recommended VS Code extensions to support generic Typescript development.
+
 ### 1.2.2
 
 * Moved all @types dependencies in the generated package.json file to devDependencies
@@ -64,8 +72,5 @@ will create a new directory named my-new-project, will insert that name into the
 
 Added `ts-node` and `typescript` packages to the dev-dependencies so that the "Launch current file with ts-node" launch config will work out-of-the-box.
 
-## TODO
+# Development
 
-Potential upcoming features:
-
-* Add an argument to let user choose whether to deploy a vanilla javascript setup, or a typescript one (default)
