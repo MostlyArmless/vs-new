@@ -101,7 +101,6 @@ ncp( path.join( __dirname, '../blueprint/' ), packageDir, ( err ) =>
     console.log('Running npm install...');
     command = `npm i -D ${devDependencies}`;
     const configToUseRepoDir = {cwd: path.resolve(`./${packageName}`)};
-    console.log(configToUseRepoDir);
     exec( command, configToUseRepoDir, (err, stdout, stderr) => {
         errorHandler(command, err, stdout, stderr);
 

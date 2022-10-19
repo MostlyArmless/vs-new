@@ -36,6 +36,11 @@ will create a new directory named my-new-project, will insert that name into the
 
 ## Revisions
 
+### 2.0.2
+
+* Added dev instructions to this repo's README
+* Removed superfluous console.log() call
+
 ### 2.0.0
 
 * Replace `mocha` with `jest` as the test runner
@@ -74,4 +79,11 @@ will create a new directory named my-new-project, will insert that name into the
 Added `ts-node` and `typescript` packages to the dev-dependencies so that the "Launch current file with ts-node" launch config will work out-of-the-box.
 
 # Development
-
+1. Clone this repo
+2. `npm install`
+3. Make changes, most likely to the contents of the `./blueprint` dir and to `./src/main.ts`
+4. Compile with `npx tsc`
+5. Test your changes from the parent of this repo's directory, using `./vs-new/build/main.js dummyProject` to create a new project locally
+6. When you're happy with your changes, describe the changes in `README.md` and `git commit` the changes
+7. Run `npm version <patch/minor/major>` to autocommit a version increment of `package.json`
+8. `git push` these changes to GitHub and `npm publish` the latest version to npm.
