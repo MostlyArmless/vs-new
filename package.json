@@ -1,6 +1,6 @@
 {
   "name": "vs-new",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Set up a development directory with everything you need to get started with TypeScript development and debugging using VS Code",
   "main": "./main.js",
   "bin": {
